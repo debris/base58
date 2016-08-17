@@ -82,8 +82,6 @@ impl ToBase58 for [u8] {
 	}
 }
 
-
-
 impl FromBase58 for str {
 	fn from_base58(&self) -> Result<Vec<u8>, FromBase58Error> {
 		let mut bin = [0u8; 132];
