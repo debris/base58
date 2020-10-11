@@ -3,6 +3,13 @@
 //! Based on https://github.com/trezor/trezor-crypto/blob/master/base58.c
 //! commit hash: c6e7d37
 //! works only up to 128 bytes
+#![no_std]
+
+#[macro_use]
+extern crate alloc;
+
+use alloc::vec::Vec;
+use alloc::string::String;
 
 const ALPHABET: &'static [u8] = b"123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 
